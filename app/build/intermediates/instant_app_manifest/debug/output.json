@@ -21,7 +21,7 @@
       "properties": {
         "packageId": "za.co.house4hack.paint3d",
         "split": "",
-        "minSdkVersion": "4"
+        "minSdkVersion": "25"
       }
     }
   ]
