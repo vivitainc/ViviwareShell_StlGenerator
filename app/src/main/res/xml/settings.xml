@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="settings"
+    android:title="Paint3d Settings" >
+
+    <PreferenceCategory android:title="Drawing Settings" >
+        <ListPreference
+            android:dialogTitle="Pixels"
+            android:entries="@array/thresholds"
+            android:entryValues="@array/thresholds"
+            android:defaultValue="50"
+            android:key="drag_radius"
+            android:summary="How far from a point you can initiate drag"
+            android:title="Drag radius" />
+        <ListPreference
+            android:dialogTitle="Pixels"
+            android:entries="@array/thresholds"
+            android:entryValues="@array/thresholds"
+            android:defaultValue="30"
+            android:key="line_dist"
+            android:summary="How far from a line you can tap to break it"
+            android:title="Line break distance" />
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="Printer Settings" >
+        <!--  ListPreference
+            android:dialogTitle="Select printer"
+            android:entries="@array/printers"
+            android:entryValues="@array/printer_vals"
+            android:key="printer_id"
+            android:summary="Select your model of CNC or 3D printer"
+            android:title="Fabrication device" / -->
+        <ListPreference 
+            android:dialogTitle="Object size"
+            android:title="Object size"
+            android:entries="@array/sizes"
+            android:entryValues="@array/sizes_vals"
+            android:key="print_size"
+            android:summary="Approximate size of printed object"
+            android:defaultValue="100"
+            />
+    </PreferenceCategory>
+
+</PreferenceScreen>

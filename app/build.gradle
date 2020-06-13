@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 10
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "za.co.house4hack.paint3d"
+        minSdkVersion 4
+        targetSdkVersion 4
+
+        ndk {
+            moduleName "application"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile files('libs/jdelaunay-0.5.jar')
+    compile files('libs/jtar-1.0.4.jar')
+    compile files('libs/jts-1.11.jar')
+    compile files('libs/junit-3.8.1.jar')
+    compile files('libs/libspen22.jar')
+    compile files('libs/log4j-1.2.13.jar')
+}

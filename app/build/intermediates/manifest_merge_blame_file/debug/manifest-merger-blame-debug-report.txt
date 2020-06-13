@@ -1,0 +1,88 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="za.co.house4hack.paint3d"
+4    android:installLocation="auto"
+5    android:versionCode="2"
+6    android:versionName="0.2" >
+7
+8    <uses-sdk
+8-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:8:5-43
+9        android:minSdkVersion="4"
+9-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:8:15-40
+10        android:targetSdkVersion="4" />
+10-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:8:5-43
+11
+12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+12-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:10:5-81
+12-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:10:22-78
+13
+14    <application
+14-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:12:5-43:19
+15        android:debuggable="true"
+16        android:icon="@drawable/ic_launcher"
+16-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:13:9-45
+17        android:label="@string/app_name"
+17-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:14:9-41
+18        android:testOnly="true" >
+19        <activity
+19-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:15:9-36:20
+20            android:name="za.co.house4hack.paint3d.Main"
+20-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:16:13-33
+21            android:label="@string/app_name"
+21-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:17:13-45
+22            android:screenOrientation="portrait" >
+22-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:18:13-49
+23            <intent-filter>
+23-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:19:13-23:29
+24                <action android:name="android.intent.action.MAIN" />
+24-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:20:17-69
+24-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:20:25-66
+25
+26                <category android:name="android.intent.category.LAUNCHER" />
+26-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:22:17-77
+26-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:22:27-74
+27            </intent-filter>
+28            <intent-filter>
+28-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:24:13-35:29
+29
+30                <!-- Associate with p3d file extension -->
+31                <action android:name="android.intent.action.VIEW" />
+31-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:26:17-69
+31-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:26:25-66
+32
+33                <category android:name="android.intent.category.DEFAULT" />
+33-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:28:17-76
+33-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:28:27-73
+34                <category android:name="android.intent.category.BROWSABLE" />
+34-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:29:17-78
+34-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:29:27-75
+35
+36                <data android:scheme="file" />
+36-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:31:17-47
+36-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:31:23-44
+37                <data android:mimeType="*/*" />
+37-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:31:17-47
+37-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:32:23-45
+38                <data android:pathPattern=".*\\.p3d" />
+38-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:31:17-47
+38-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:33:23-53
+39                <data android:host="*" />
+39-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:31:17-47
+39-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:34:23-39
+40            </intent-filter>
+41        </activity>
+42        <activity android:name="za.co.house4hack.paint3d.spen.SPenActivity" >
+42-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:37:9-38:20
+42-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:37:19-52
+43        </activity>
+44        <activity android:name="za.co.house4hack.paint3d.spen.ListActivity" >
+44-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:39:9-40:20
+44-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:39:19-52
+45        </activity>
+46        <activity android:name="za.co.house4hack.paint3d.Preferences" >
+46-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:41:9-42:20
+46-->/Users/kassy/piccolo_work/projects/MakerDroid2/app/src/main/AndroidManifest.xml:41:19-46
+47        </activity>
+48    </application>
+49
+50</manifest>

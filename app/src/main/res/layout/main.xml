@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:background="@drawable/tab_background"
+        android:paddingTop="3dp">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/btn_save"
+            android:onClick="onSave"
+            android:src="@android:drawable/ic_menu_save"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/btn_delete"
+            android:onClick="onDeletePoly"
+            android:src="@android:drawable/ic_menu_delete" />        
+        
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/btn_undo"
+            android:onClick="onUndo"
+            android:src="@android:drawable/ic_menu_revert" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/btn_save"
+            android:onClick="onNewPoly"
+            android:src="@android:drawable/ic_menu_edit" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/btn_etch"
+            android:onClick="onLayer"
+            android:src="@android:drawable/ic_menu_sort_by_size" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/btn_background"
+            android:onClick="onBackground"
+            android:src="@android:drawable/ic_menu_crop" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@+id/vp_bg_image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitCenter" />
+
+        <za.co.house4hack.paint3d.VectorPaint
+            android:id="@+id/vector_paint"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/main_bg" />
+    </FrameLayout>
+
+</LinearLayout>

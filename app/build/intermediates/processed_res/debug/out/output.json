@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "applicationId": "za.co.house4hack.paint3d",
+  "variantType": "BASE_APK",
+  "elements": [
+    {
+      "outputType": {
+        "type": "PROCESSED_RES"
+      },
+      "apkData": {
+        "type": "MAIN",
+        "splits": [],
+        "versionCode": 2,
+        "versionName": "0.2",
+        "outputFile": "app-debug.apk",
+        "fullName": "debug",
+        "baseName": "debug",
+        "dirName": ""
+      },
+      "path": "resources-debug.ap_",
+      "properties": {
+        "packageId": "za.co.house4hack.paint3d",
+        "split": "",
+        "minSdkVersion": "4"
+      }
+    }
+  ]
+}
