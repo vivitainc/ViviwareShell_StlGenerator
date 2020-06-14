@@ -31,7 +31,7 @@ import android.widget.Toast;
 
 import com.samsung.sdraw.SDrawLibrary;
 
-class VectorPaint extends View {
+public class VectorPaint extends View {
    // line and circle sizes
    int CIRCLE_SPEN = 5;
    int LINE_SPEN = 2;
@@ -48,7 +48,7 @@ class VectorPaint extends View {
 
    // data storage
    Polygon polygon;
-   List<Layer> layers; // each layer has many polygons with many points
+   public List<Layer> layers; // each layer has many polygons with many points
    Point drag;
    Paint pCirc;
    Paint pCircDrag;
