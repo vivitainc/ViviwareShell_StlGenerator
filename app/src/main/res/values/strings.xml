@@ -18,8 +18,8 @@
     <string name="btn_delete">Delete</string>
     <string name="btn_etch">Etch</string>
     <string name="btn_background">Background</string>
-    
-   <string name="welcome_text">
+
+    <string name="welcome_text">
       Welcome to MakerDroid!\n\n
       You can use MarkerDroid to draw out objects to be fabricated on a 3D printer
       or CNC router. You will draw a 2D drawing made out of polygons that MakerDroid 
@@ -27,7 +27,7 @@
       in the menu to get started.\n\n
       Supported 3D printer: BFB RapMan v3.1 dual-head
    </string>
-   <string name="help_text">First tap out the outer shape of the object you wish to fabricate.\n\n
+    <string name="help_text">First tap out the outer shape of the object you wish to fabricate.\n\n
 Tap the pen icon above to draw holes inside the shape. Lines must not cross each other! Keep tapping 
 the button to switch between polygons in the current layer. To place dots close together, tap out 
 a long line, then break the line and move the dot into position and repeat as necessary.\n\n
@@ -37,12 +37,12 @@ Load a background image to trace out a shape from a photo, image, or freehand dr
 toolbar button allows you to toggle the background on and off to check your drawing.\n\n
 Preview the object using the preview menu item to see what the fabricated object will look like when 
 3D printed. You can select your fabrication device and tweak the drawing settings in the settings menu.</string>
-   <string name="print_text">
+    <string name="print_text">
       Your 3D model has been rendered to GCode that can be fabricated. Please transfer 
       the SD card to your printer/router to begin fabrication. You can use a GCode viewer 
       to preview the output and scale it if necessary. Saved file: 
    </string>
-   
+
     <string name="vp_help_spen">For tips, press Menu > More > Help</string>
     <string name="vp_help_touch">For tips, Press Menu > More > Help</string>
     <string name="progress_preview">Generating 3D preview...</string>

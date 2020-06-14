@@ -13,20 +13,24 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:extractNativeLibs="false"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:testOnly="true" >
-        <activity
-            android:name="za.co.house4hack.paint3d.Main"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+        android:testOnly="true"
+        android:theme="@style/AppTheme.NoActionBar" >
+        <activity android:name="za.co.house4hack.paint3d.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="za.co.house4hack.paint3d.Main"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
 
                 <!-- Associate with p3d file extension -->
@@ -41,12 +45,9 @@
                 <data android:host="*" />
             </intent-filter>
         </activity>
-        <activity android:name="za.co.house4hack.paint3d.spen.SPenActivity" >
-        </activity>
-        <activity android:name="za.co.house4hack.paint3d.spen.ListActivity" >
-        </activity>
-        <activity android:name="za.co.house4hack.paint3d.Preferences" >
-        </activity>
+        <activity android:name="za.co.house4hack.paint3d.spen.SPenActivity" />
+        <activity android:name="za.co.house4hack.paint3d.spen.ListActivity" />
+        <activity android:name="za.co.house4hack.paint3d.Preferences" />
     </application>
 
 </manifest>

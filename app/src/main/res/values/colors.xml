@@ -2,5 +2,34 @@
 
     <color name="main_bg">#A0000000</color>
     <color name="freehand_bg">#ffffffff</color>
+    <color name="colorPrimary">#757575</color>
+    <color name="colorPrimaryDark">#212121</color>
+    <color name="colorAccent">#607D8B</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FFFF2E31</color>
+    <color name="black">#FF000000</color>
+    <color name="green">#FF00FF00</color>
+    <color name="blue">#FF0000FF</color>
+    <color name="gray">#FF999999</color>
+    <color name="gray_light">#FFBBBBBB</color>
+
+    <color name="colorButtonDeactive">#FFaaaaaa</color>
+    <color name="colorButtonActive">#FF0000FF</color>
+
+    <color name="background_mode">#FF9F9F9F</color>
+    <color name="background_tool">#FFFFFFFF</color>
+    <color name="background_diagram">#FF7F7F7F</color>
+    <color name="background_parameter_window">#FF898EA2</color>
+
+    <color name="selector_selected">#FFFF3940</color>
+    <color name="selector_deselected">#FF9AA1AA</color>
+
+    <color name="background_main">#FFEAEDF2</color>
+    <color name="color_tool_label_bg">#FFECF0F5</color>
+    <color name="color_tool_label_text">#FFa8b1bd</color>
+
+    <color name="pink">#FFFFABAE</color>
+    <color name="halfwhite">#44FFFFFF</color>
+    <color name="coral">#ffff7f50</color>
 
 </resources>
