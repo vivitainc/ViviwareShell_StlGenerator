@@ -29,6 +29,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.core.content.FileProvider;
+
 import com.samsung.sdraw.SDrawLibrary;
 
 public class VectorPaint extends View {
@@ -367,14 +369,18 @@ public class VectorPaint extends View {
    }
 
    // save the shape and preview in 3D using STL viewer
-   public void preview(String fullFilePath) throws DelaunayError, IOException {
+   public void preview(Context context, String fullFilePath) throws DelaunayError, IOException {
       String sdDir = Environment.getExternalStorageDirectory().getAbsolutePath();
 
       ExtrudePoly.saveToSTL(layers.get(0), null, (layers.size() > 1 ? layers.get(1) : null), fullFilePath, SCALE_MAX);
       File f = new File(fullFilePath);
       Intent i = new Intent();
       i.setAction(Intent.ACTION_VIEW);
-      i.setDataAndType(Uri.fromFile(f), "");
+
+      Uri contentUri = FileProvider.getUriForFile(context, BuildConfig.APPLICATION_ID + ".fileprovider", f);
+      i.putExtra(Intent.EXTRA_STREAM, contentUri);
+      i.setType("");
+//      i.setDataAndType(Uri.fromFile(f), "");
       getContext().startActivity(i);
    }
 

@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
         val vectorPaint = VectorPaint(this)
         vectorPaint.layers.set(0, layer)
-        vectorPaint.preview(Environment.getExternalStorageDirectory().absolutePath.toString()+"/VIVITA/test.stl")
+        vectorPaint.preview(this, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS).toString()  + "/VIVITA/test.stl")
 
     }
 }

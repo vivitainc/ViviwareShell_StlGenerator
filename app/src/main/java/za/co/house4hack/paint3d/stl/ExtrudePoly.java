@@ -220,7 +220,9 @@ public class ExtrudePoly {
       for (int i = 0; i < toHeight.length; i++)
          toHeight[i] = (i < raised) ? 7f : 2f;
 
-      TriMesh ptt = pto3d.polyToTriMesh(ep, 5f, fromHeight, toHeight);
+      // kassy change
+//      TriMesh ptt = pto3d.polyToTriMesh(ep, 5f, fromHeight, toHeight);
+      TriMesh ptt = pto3d.polyToTriMesh(ep, 2f, fromHeight, toHeight);
 
       out.write(ptt.toSTL());
       out.close();

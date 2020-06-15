@@ -225,7 +225,7 @@ public class Main extends Activity {
          @Override
          protected Void doInBackground(Void... params) {
             try {
-               vp.preview(f.getAbsolutePath());
+               vp.preview(Main.this, f.getAbsolutePath());
             } catch (final Exception e) {
                Log.e(LOG_TAG, "Error generating STL", e);
                runOnUiThread(new Runnable() {
