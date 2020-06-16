@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">MakerDroid</string>
+    <string name="app_name">Shell Ext</string>
     <string name="menu_preview">Preview</string>
     <string name="menu_discard">Discard</string>
     <string name="menu_load">Load</string>
