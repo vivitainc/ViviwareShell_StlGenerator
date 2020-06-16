@@ -31,11 +31,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val pathJsonStr = intent.getStringExtra(INTENT_EX_3D_PATH) ?: null
-        if (pathJsonStr == null) {
-            return
-        }
-//        val pathJsonStr = testJson
+//        val pathJsonStr = intent.getStringExtra(INTENT_EX_3D_PATH) ?: null
+//        if (pathJsonStr == null) {
+//            return
+//        }
+        val pathJsonStr = testJson
         val pathsJson = JSONObject(pathJsonStr)
 
         val layer = Layer()
