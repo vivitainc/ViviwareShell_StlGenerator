@@ -19,6 +19,8 @@ import za.co.house4hack.paint3d.stl.Polygon;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.net.Uri;
@@ -378,8 +380,16 @@ public class VectorPaint extends View {
       i.setAction(Intent.ACTION_VIEW);
 
       Uri contentUri = FileProvider.getUriForFile(context, BuildConfig.APPLICATION_ID + ".fileprovider", f);
-      i.putExtra(Intent.EXTRA_STREAM, contentUri);
-      i.setType("");
+
+      List<ResolveInfo> resInfoList = context.getPackageManager().queryIntentActivities(i, PackageManager.MATCH_DEFAULT_ONLY);
+      for (ResolveInfo resolveInfo : resInfoList) {
+         String packageName = resolveInfo.activityInfo.packageName;
+         context.grantUriPermission(packageName, contentUri, Intent.FLAG_GRANT_WRITE_URI_PERMISSION | Intent.FLAG_GRANT_READ_URI_PERMISSION);
+      }
+
+//      i.putExtra(Intent.EXTRA_STREAM, contentUri);
+      i.setDataAndType(contentUri, "application/sla");
+//      i.setType("stl");
 //      i.setDataAndType(Uri.fromFile(f), "");
       getContext().startActivity(i);
    }

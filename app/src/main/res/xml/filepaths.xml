@@ -2,6 +2,6 @@
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
     <external-path name="stl" path="Documents/" />
     <external-path name="stl" path="Documents/VIVITA/" />
-    <external-path name="external_files" path="Documents/VIVITA/" />
-    <external-path name="external_files" path="." />
+    <external-path name="stl" path="Documents/VIVITA/" />
+    <external-path name="stl" path="." />
 </paths>

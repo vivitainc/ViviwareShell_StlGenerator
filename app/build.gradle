@@ -8,7 +8,7 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "za.co.house4hack.paint3d"
+        applicationId "co.vivita.viviware.shell_3dmaker"
         minSdkVersion 25
         targetSdkVersion 29
 
