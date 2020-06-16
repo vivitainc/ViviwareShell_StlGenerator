@@ -5,13 +5,14 @@ import android.content.pm.PackageManager
 import android.content.pm.ResolveInfo
 import android.os.Bundle
 import android.os.Environment
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.FileProvider
 import org.json.JSONArray
 import org.json.JSONObject
 import za.co.house4hack.paint3d.stl.Layer
 import za.co.house4hack.paint3d.stl.Point
 import za.co.house4hack.paint3d.stl.Polygon
+import java.io.File
 
 
 class MainActivity : AppCompatActivity() {
@@ -58,13 +59,36 @@ class MainActivity : AppCompatActivity() {
             layer.add(polygonIn1)
         }
 
+        val fullFilePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS)
+            .toString() + "/VIVITA/test.stl"
+
         val vectorPaint = VectorPaint(this)
         vectorPaint.layers.set(0, layer)
-        vectorPaint.preview(this,
-            Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS)
-                .toString() + "/VIVITA/test.stl"
-        )
+        vectorPaint.preview(this, fullFilePath)
 
+
+        val f = File(fullFilePath)
+        val i = Intent()
+        i.action = Intent.ACTION_VIEW
+
+        val contentUri = FileProvider.getUriForFile(this, BuildConfig.APPLICATION_ID + ".fileprovider", f)
+
+        val resInfoList: List<ResolveInfo> = getPackageManager().queryIntentActivities(i, PackageManager.MATCH_DEFAULT_ONLY)
+        for (resolveInfo in resInfoList) {
+            val packageName = resolveInfo.activityInfo.packageName
+            grantUriPermission(
+                packageName,
+                contentUri,
+                Intent.FLAG_GRANT_WRITE_URI_PERMISSION or Intent.FLAG_GRANT_READ_URI_PERMISSION
+            )
+        }
+
+//      i.putExtra(Intent.EXTRA_STREAM, contentUri);
+        i.setDataAndType(contentUri, "application/sla")
+//      i.setType("stl");
+//      i.setDataAndType(Uri.fromFile(f), "");
+//      i.setDataAndType(Uri.fromFile(f), "");
+        startActivity(i)
     }
 
     companion object {

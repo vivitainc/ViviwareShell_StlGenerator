@@ -375,23 +375,6 @@ public class VectorPaint extends View {
       String sdDir = Environment.getExternalStorageDirectory().getAbsolutePath();
 
       ExtrudePoly.saveToSTL(layers.get(0), null, (layers.size() > 1 ? layers.get(1) : null), fullFilePath, SCALE_MAX);
-      File f = new File(fullFilePath);
-      Intent i = new Intent();
-      i.setAction(Intent.ACTION_VIEW);
-
-      Uri contentUri = FileProvider.getUriForFile(context, BuildConfig.APPLICATION_ID + ".fileprovider", f);
-
-      List<ResolveInfo> resInfoList = context.getPackageManager().queryIntentActivities(i, PackageManager.MATCH_DEFAULT_ONLY);
-      for (ResolveInfo resolveInfo : resInfoList) {
-         String packageName = resolveInfo.activityInfo.packageName;
-         context.grantUriPermission(packageName, contentUri, Intent.FLAG_GRANT_WRITE_URI_PERMISSION | Intent.FLAG_GRANT_READ_URI_PERMISSION);
-      }
-
-//      i.putExtra(Intent.EXTRA_STREAM, contentUri);
-      i.setDataAndType(contentUri, "application/sla");
-//      i.setType("stl");
-//      i.setDataAndType(Uri.fromFile(f), "");
-      getContext().startActivity(i);
    }
 
    public void print(String fullFilePath, String printerModel) throws Exception {
